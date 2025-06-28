@@ -15,7 +15,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { toast } from '@/components/ui/use-toast';
+import { toast } from 'sonner';
 
 // Define the validation schema using Zod
 const formSchema = z.object({
@@ -48,8 +48,7 @@ const SignUpPage = () => {
     // In a real app, you'd call your API here.
     console.log('Form submitted with values:', values);
     
-    toast({
-      title: "Account Created!",
+    toast.success("Account Created!", {
       description: "You have been successfully signed up.",
     });
 
